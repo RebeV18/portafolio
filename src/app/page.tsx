@@ -1,9 +1,10 @@
-import Image from "next/image";
+import ProjectsSection from "@/components/ProjectsSection";
+import SkillsSection from "@/components/SkillsSection";
 
 export default function Home() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <section className="min-h-screen flex items-center justify-center text-center px-4 relative">
+      <section id="inicio" className="min-h-screen flex items-center justify-center text-center px-4 relative">
         <div className="max-w-4xl mx-auto relative z-10">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
@@ -30,232 +31,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Proyectos Section */}
-      <section id="proyectos" className="py-20 bg-gray-50 dark:bg-gray-900/50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Mis Proyectos
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((project) => (
-              <div
-                key={project}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-              >
-                <div className="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                  <span className="text-gray-500 dark:text-gray-400">
-                    Imagen del Proyecto {project}
-                  </span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
-                    Proyecto {project}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">
-                    Descripción breve del proyecto y las tecnologías utilizadas.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 px-2 py-1 rounded text-sm">
-                      React
-                    </span>
-                    <span className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 px-2 py-1 rounded text-sm">
-                      TypeScript
-                    </span>
-                  </div>
-                  <div className="flex gap-4">
-                    <a
-                      href="#"
-                      className="text-blue-600 hover:text-blue-700 font-medium"
-                    >
-                      Ver Demo
-                    </a>
-                    <a
-                      href="#"
-                      className="text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 font-medium"
-                    >
-                      Código
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProjectsSection />
 
-      {/* Skills */}
-      <section id="habilidades" className="py-20">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-            Tecnologías
-          </h2>
-
-          {/* Frontend Technologies */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-semibold mb-8 text-center text-white">
-              Frontend
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {[
-                {
-                  name: "React",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                },
-                {
-                  name: "Next.js",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-                },
-                {
-                  name: "TypeScript",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-                },
-                {
-                  name: "JavaScript",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-                },
-                {
-                  name: "Tailwind CSS",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-                },
-                {
-                  name: "HTML5",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-                },
-              ].map((tech) => (
-                <div
-                  key={tech.name}
-                  className="flex flex-col items-center p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
-                >
-                  <Image
-                    src={tech.icon}
-                    alt={tech.name}
-                    width={48}
-                    height={48}
-                    className="mb-3"
-                  />
-                  <span className="text-white text-sm font-medium text-center">
-                    {tech.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Backend Technologies */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-semibold mb-8 text-center text-white">
-              Backend
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {[
-                {
-                  name: "Node.js",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-                },
-                {
-                  name: "Express.js",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-                },
-                {
-                  name: "NestJS",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
-                },
-
-                {
-                  name: "Firebase",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
-                },
-
-                {
-                  name: "MongoDB",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-                },
-                {
-                  name: "Python",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-                },
-              ].map((tech) => (
-                <div
-                  key={tech.name}
-                  className="flex flex-col items-center p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
-                >
-                  <Image
-                    src={tech.icon}
-                    alt={tech.name}
-                    width={48}
-                    height={48}
-                    className="mb-3"
-                  />
-                  <span className="text-white text-sm font-medium text-center">
-                    {tech.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Tools & Others */}
-          <div>
-            <h3 className="text-2xl font-semibold mb-8 text-center text-white">
-              Herramientas & Otros
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {[
-                {
-                  name: "GitHub",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-                },
-                {
-                  name: "VS Code",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-                },
-                {
-                  name: "Figma",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-                },
-                {
-                  name: "SCRUM / Kanban",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
-                },
-                {
-                  name: "Visual Basic",
-                  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
-                },
-                {
-                  name: "Discord",
-                  icon: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/discord.svg",
-                },
-              ].map((tech) => (
-                <div
-                  key={tech.name}
-                  className="flex flex-col items-center p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
-                >
-                  <Image
-                    src={tech.icon}
-                    alt={tech.name}
-                    width={48}
-                    height={48}
-                    className="mb-3"
-                  />
-                  <span className="text-white text-sm font-medium text-center">
-                    {tech.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <SkillsSection />
 
       {/* Contact */}
-      <section id="contacto" className="py-20 bg-gray-50 dark:bg-gray-900/50">
+      <section id="contacto" className="py-10 bg-gray-50 dark:bg-gray-900/50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Contacto
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-xl font-semibold mb-6">¡Hablemos!</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <svg
@@ -284,55 +71,42 @@ export default function Home() {
                   <span>@rebevargas.cl</span>
                 </div>
               </div>
-              {/* Social Links */}
-              <div className="flex space-x-4">
+            </div>
+            {/* Social Links */}
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex space-x-16">
                 <a
-                  href="#"
+                  href="https://github.com/RebeV18"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors"
                   aria-label="GitHub"
                 >
                   <svg
-                    className="h-5 w-5"
+                    className="h-10 w-10"
                     fill="currentColor"
-                    viewBox="0 0 24 24"
+                    viewBox="0 0 20 20"
                   >
                     <path
                       fillRule="evenodd"
-                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.523 0 10 0z"
                       clipRule="evenodd"
                     />
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/rv-chile"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors"
                   aria-label="LinkedIn"
                 >
                   <svg
-                    className="h-5 w-5"
+                    className="h-10 w-10"
                     fill="currentColor"
-                    viewBox="0 0 24 24"
+                    viewBox="0 0 20 20"
                   >
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
-                  aria-label="Email"
-                >
-                  <svg
-                    className="h-5 w-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
+                    <path d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575c-.85 0-1.54-.69-1.54-1.54s.69-1.54 1.54-1.54 1.54.69 1.54 1.54-.69 1.54-1.54 1.54zm1.336 9.763H3.667v-8.59h2.674v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" />
                   </svg>
                 </a>
               </div>
