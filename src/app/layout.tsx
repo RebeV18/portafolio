@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${montserrat.className} bg-blue-900 bg-blend-multiply text-white`}
+        className={`${montserrat.className} bg-purple-900 bg-blend-multiply text-white`}
       >
         <div className="min-h-screen text-white">
           <Navbar />

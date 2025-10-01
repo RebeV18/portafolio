@@ -11,15 +11,7 @@ export default function Navbar() {
   };
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 bg-blue-900 bg-blend-multiply border-b border-blue-700"
-      style={{
-        backgroundImage: `url('https://res.cloudinary.com/ddxlvh0go/image/upload/v1759201670/IMG_4194_qhxmre.jpg')`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
-      }}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 y border-b border-blue-700">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -41,25 +33,25 @@ export default function Navbar() {
             <div className="ml-10 flex items-baseline space-x-4">
               <a
                 href="#inicio"
-                className="hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-extralight transition-colors"
               >
                 Inicio
               </a>
               <a
                 href="#proyectos"
-                className="hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-extralight transition-colors"
               >
                 Proyectos
               </a>
               <a
                 href="#habilidades"
-                className="hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-extralight transition-colors"
               >
                 Habilidades
               </a>
               <a
                 href="#contacto"
-                className="hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="hover:bg-blue-700 text-white px-3 py-2 rounded-md text-sm font-extralight transition-colors"
               >
                 Contacto
               </a>
@@ -100,28 +92,28 @@ export default function Navbar() {
             <a
               href="#inicio"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors"
+              className="block hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-extralight transition-colors"
             >
               Inicio
             </a>
             <a
               href="#proyectos"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors"
+              className="block hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-extralight transition-colors"
             >
               Proyectos
             </a>
             <a
               href="#habilidades"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors"
+              className="block hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-extralight transition-colors"
             >
               Habilidades
             </a>
             <a
               href="#contacto"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors"
+              className="block hover:bg-blue-700 text-white px-3 py-2 rounded-md text-base font-extralight transition-colors"
             >
               Contacto
             </a>

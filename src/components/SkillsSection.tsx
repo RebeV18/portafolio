@@ -140,7 +140,7 @@ export default function SkillsSection() {
   return (
     <section id="habilidades" className="py-20">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-white">
           Tecnologías
         </h2>
 

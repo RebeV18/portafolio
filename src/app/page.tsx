@@ -6,7 +6,7 @@ export default function Home() {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <section id="inicio" className="min-h-screen flex items-center justify-center text-center px-4 relative">
         <div className="max-w-4xl mx-auto relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <h1 className="text-5xl md:text-7xl font-extralight mb-6">
             <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
               LandingRV.cl
             </span>
@@ -38,7 +38,7 @@ export default function Home() {
       {/* Contact */}
       <section id="contacto" className="py-10 bg-gray-50 dark:bg-gray-900/50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-4xl text-center font-semibold mb-12">
             Contacto
           </h2>
           <div className="grid md:grid-cols-2 gap-12">

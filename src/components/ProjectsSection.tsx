@@ -59,18 +59,18 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="proyectos" className="py-20 bg-gray-50 dark:bg-gray-900/50">
+    <section id="proyectos" className="py-20 bg-slate-50 dark:bg-slate-900/50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12">
           Algunos de mis Proyectos
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full"
+              className="bg-white dark:bg-slate-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full"
             >
-              <div className="h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center relative overflow-hidden">
+              <div className="h-48 bg-slate-200 dark:bg-slate-700 flex items-center justify-center relative overflow-hidden">
                 <Image
                   src={project.pic}
                   alt={"Imagen del Proyecto"}
@@ -81,14 +81,14 @@ export default function ProjectsSection() {
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 flex-grow text-sm">
+                <p className="text-slate-600 dark:text-slate-400 mb-4 flex-grow text-sm">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 px-2 py-1 rounded text-sm"
+                      className="bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-300 px-2 py-1 rounded text-sm"
                     >
                       {tech}
                     </span>
