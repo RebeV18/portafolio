@@ -49,7 +49,7 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <svg
-                    className="h-5 w-5 text-blue-600 mr-3"
+                    className="h-5 w-5 text-gray-100 mr-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -65,7 +65,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center">
                   <svg
-                    className="h-5 w-5 text-blue-600 mr-3"
+                    className="h-5 w-5 text-gray-100 mr-3"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
