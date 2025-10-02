@@ -81,14 +81,14 @@ export default function ProjectsSection() {
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-                <p className="text-slate-600 dark:text-slate-400 mb-4 flex-grow text-sm">
+                <p className="text-white mb-4 flex-grow text-sm">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-slate-900/50 text-slate-800 dark:text-slate-300 px-3 py-1 rounded-lg text-sm"
+                      className="bg-slate-900/50 text-white px-3 py-1 rounded-lg text-sm"
                     >
                       {tech}
                     </span>
