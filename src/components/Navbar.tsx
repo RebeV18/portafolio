@@ -96,7 +96,7 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         <div className={`md:hidden ${isMobileMenuOpen ? "block" : "hidden"}`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-900/95">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-violet-900/40">
             <a
               href="#inicio"
               onClick={() => setIsMobileMenuOpen(false)}
