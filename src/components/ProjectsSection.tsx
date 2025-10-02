@@ -59,7 +59,7 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section id="proyectos" className="py-20 bg-slate-50 dark:bg-slate-900/50">
+    <section id="proyectos" className="py-20">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12">
           Algunos de mis Proyectos
@@ -68,7 +68,7 @@ export default function ProjectsSection() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white dark:bg-slate-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full"
+              className="bg-white/10 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full"
             >
               <div className="h-48 bg-slate-200 dark:bg-slate-700 flex items-center justify-center relative overflow-hidden">
                 <Image
@@ -88,7 +88,7 @@ export default function ProjectsSection() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-300 px-2 py-1 rounded text-sm"
+                      className="bg-slate-900/50 text-slate-800 dark:text-slate-300 px-3 py-1 rounded-lg text-sm"
                     >
                       {tech}
                     </span>
@@ -98,7 +98,9 @@ export default function ProjectsSection() {
                   {project.demoUrl && (
                     <a
                       href={project.demoUrl}
-                      className="text-white hover:text-blue-700 font-medium"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white px-3 py-1 hover:bg-slate-900/50 hover:rounded-xl font-medium"
                     >
                       Ver Demo
                     </a>
@@ -106,7 +108,9 @@ export default function ProjectsSection() {
                   {project.codeUrl && (
                     <a
                       href={project.codeUrl}
-                      className="text-white hover:text-blue-700 font-medium"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:bg-slate-900/50 px-3 py-1 hover:rounded-xl font-medium"
                     >
                       Ver Código
                     </a>

@@ -131,7 +131,7 @@ export default function SkillsSection() {
   ];
 
   const TechCard = ({ tech }: { tech: Technology }) => (
-    <div className="flex flex-row items-center gap-3 p-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-300 hover:scale-105">
+    <div className="flex flex-row items-center gap-3 p-4 bg-white/10 backdrop-blur-sm rounded-lg">
       <Image src={tech.icon} alt={tech.name} width={24} height={24} />
       <span className="text-white text-sm font-medium">{tech.name}</span>
     </div>

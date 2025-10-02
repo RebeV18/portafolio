@@ -3,29 +3,32 @@ import SkillsSection from "@/components/SkillsSection";
 
 export default function Home() {
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <section id="inicio" className="min-h-screen flex items-center justify-center text-center px-4 relative">
+    <div className="max-w-6xl mx-auto px-4 md:px-[30px]">
+      <section
+        id="inicio"
+        className="min-h-screen flex items-center justify-center text-center px-4 relative"
+      >
         <div className="max-w-4xl mx-auto relative z-10">
-          <h1 className="text-5xl md:text-7xl font-extralight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl mb-6">
             <span className="bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
               LandingRV.cl
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-8">
+          <p className="text-sm sm:text-base lg:text-lg xl:text-2xl 2xl:text-3xl text-gray-200 mb-16">
             La precisión Full Stack que aterriza tus proyectos.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-8 justify-center">
             <a
               href="#proyectos"
-              className="bg-white text-blue-800 hover:bg-transparent hover:text-white border border-transparent hover:border-white px-8 py-3 rounded-lg font-medium transition-all duration-300"
+              className="bg-purple-600 text-white hover:bg-transparent hover:text-white border border-transparent hover:border-white px-14 py-2 rounded-full font-medium transition-all duration-300"
             >
-              Ver mis proyectos
+              PROYECTOS
             </a>
             <a
               href="#contacto"
-              className="border border-white text-white hover:bg-white hover:text-blue-800 px-8 py-3 rounded-lg font-medium transition-colors"
+              className="border border-white text-white hover:bg-purple-600 hover:text-white hover:border-transparent px-16 py-2 rounded-full font-medium transition-colors"
             >
-              Contactarme
+              CONTACTO
             </a>
           </div>
         </div>
@@ -36,8 +39,8 @@ export default function Home() {
       <SkillsSection />
 
       {/* Contact */}
-      <section id="contacto" className="py-10 bg-gray-50 dark:bg-gray-900/50">
-        <div className="max-w-4xl mx-auto">
+      <section id="contacto" className="py-10">
+        <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm p-8 rounded-xl">
           <h2 className="text-3xl md:text-4xl text-center font-semibold mb-12">
             Contacto
           </h2>
